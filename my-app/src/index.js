@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const  Books=[
+const  books=[
 {
    author: 'Jordan Moore',
    title: 'Interesting Facts For Curious Minds',
@@ -15,37 +15,30 @@ const  Books=[
   img:'https://m.media-amazon.com/images/I/81JJPDNlxSL._AC_UY218_.jpg',
 },
 ]
-const names= ['bole','fatty','shruti'];
-const newNames = names.map((name) =>{
-  return <h1>{name}</h1>
-}
-);
-console.log(newNames)
-
-
-
-
 
 
 
 const BookList = () => {
   return (
     <section className="booklist">
-       {newNames}
+       {books.map((book)=>{
+        const{img,title,author} = book;
+        return <Book img={img} title={title} author={author}/>
+
+       })};
         
     </section>
   );
 };
 
 const Book = (props) => {
-  const {img,author,title, children} = props;
+  const {img,author,title} = props;
   return (
     <article className='book'>
-      <img src= {props.img} alt={props.title}/>
-       <h2>{props.title}</h2>
-       <h4>{props.author}</h4>
-        <p>hello</p>
-        <button>click me</button>
+      <img src= {img} alt={title}/>
+       <h2>{title}</h2>
+       <h4>{author}</h4>
+        
       </article>
       
         
