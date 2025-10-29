@@ -11,27 +11,23 @@ const BookList = () => {
     </section>
   );
 };
+const author = 'Jordan Moore';
 
 const Book = () => {
+  const title = 'Interesting Facts For Curious Minds';
   return (
-    <article className="book">
-      <Title></Title>
-      <Image></Image>
-
-      <Author></Author>
+    <article className='book'>
+      <img
+        src='/book1.jpg'
+        alt='Interesting Facts For Curious Minds'
+      />
+      <h2>{title}</h2>
+      <h4>{author.toUpperCase()}</h4>
+      <p>{50 + 50}</p>
     </article>
   );
 };
 
-const Image = () => (
-  <img src="./book1.img" alt="Diary of a Wimpy Kid" className="book img"></img>
-);
-const Title = () => <h2>Diary of a Wimpy Kid</h2>;
-const Author = () => (
-  <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.5rem' }}>
-    Jordan Moore
-  </h4>
-);
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
