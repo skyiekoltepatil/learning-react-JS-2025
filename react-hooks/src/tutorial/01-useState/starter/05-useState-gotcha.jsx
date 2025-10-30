@@ -3,13 +3,11 @@ import { useState } from 'react'
 const UseStateGotcha = () => {
   const [value, setValue] = useState(0);
 
- const handleClick = () => {
+const handleClick = () => {
   setTimeout(() => {
-    console.log('no of button');
-    setValue((currentState) => {
-      return currentState + 1;
-    });
-  }, 2000);
+  console.log('clicked the button');
+    setValue(value + 1);
+  }, 3000);
 };
   return (
     <div>
