@@ -63,3 +63,8 @@ body {
   background: #0014c3;
   color: #f5f5f5;
 }
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
