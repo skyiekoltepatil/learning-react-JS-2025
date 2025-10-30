@@ -18,7 +18,7 @@ const UseStateArray = () => {
             <h4>{name}</h4>
             <button onClick={() => magic(id)}>magic</button>
           </div>
-        );
+        )
       })}
       <button
         className='btn'
