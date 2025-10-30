@@ -7,31 +7,28 @@ const  books=[
    author: 'Jordan Moore',
    title: 'Interesting Facts For Curious Minds',
    img : '/book1.jpg',
-   
+   id : 1
 },
 {
   author: 'Alex Michaelides',
   title: 'THE SILENT PATIENT',
   img:'https://m.media-amazon.com/images/I/81JJPDNlxSL._AC_UY218_.jpg',
-  
+  id : 2
 },
 ]
 
 
 
-const BookList = () => {
+function BookList() {
   return (
-    <section className="booklist">
-       {books.map((book)=>{
-        const{img,title,author,}= book;
-        return <Book img={img} title={title} author={author} />;
-
-       })};
-       
-        <EventExamples/>
+    <section className='booklist'>
+      <EventExamples />
+      {books.map((book) => {
+        return <Book {...book} key={book.id} />;
+      })}
     </section>
   );
-};
+}
 // const EventExamples = () => {
 //   const handleFormInput = (e) => {
 //     console.log(e);
@@ -83,7 +80,7 @@ const EventExamples = () => {
 };
 
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author,id } = props;
   const displayTitle = () => {
     console.log(title);
   };
@@ -94,6 +91,7 @@ const Book = (props) => {
       <h2>{title}</h2>
       <button onClick={displayTitle}>display title</button>
       <h4>{author} </h4>
+      <h5>{id}</h5>
     </article>
   );
 };
