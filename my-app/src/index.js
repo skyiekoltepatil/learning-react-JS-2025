@@ -32,36 +32,52 @@ const BookList = () => {
     </section>
   );
 };
+// const EventExamples = () => {
+//   const handleFormInput = (e) => {
+//     console.log(e);
+   
+//     console.log(`Input Name : ${e.target.name}`);
+//     console.log(`Input Value : ${e.target.value}`);
+    
+//   };
+//   const handleButtonClick = () => {
+//     alert('handle button click');
+//   };
+//   const handleFormSubmission = (e) => {
+//     e.preventDefault();
+//     console.log('form submitted');
+//   };
+//   return (
+//     <section>
+      
+//       <form onSubmit={handleFormSubmission}>
+//         <h2>Typical Form</h2>
+//         <input
+//           type='text'
+//           name='example'
+//           onChange={handleFormInput}
+//           style={{ margin: '1rem 0' }}
+//         />
+       
+//         <button type='submit'>submit form</button>
+//       </form>
+//       <button onClick={handleButtonClick}>click me</button>
+//     </section>
+//   );
+// };
 const EventExamples = () => {
-  const handleFormInput = (e) => {
-    console.log(e);
-    // e.target - element
-    console.log(`Input Name : ${e.target.name}`);
-    console.log(`Input Value : ${e.target.value}`);
-    // console.log('handle form input');
-  };
-  const handleButtonClick = () => {
-    alert('handle button click');
-  };
-  const handleFormSubmission = (e) => {
-    e.preventDefault();
-    console.log('form submitted');
-  };
   return (
     <section>
-      {/* add onSubmit Event Handler */}
-      <form onSubmit={handleFormSubmission}>
+      <form>
         <h2>Typical Form</h2>
         <input
           type='text'
           name='example'
-          onChange={handleFormInput}
+          onChange={(e) => console.log(e.target.value)}
           style={{ margin: '1rem 0' }}
         />
-        {/* add button with type='submit' */}
-        <button type='submit'>submit form</button>
       </form>
-      <button onClick={handleButtonClick}>click me</button>
+      <button onClick={() => console.log('you clicked me')}>click me</button>
     </section>
   );
 };
