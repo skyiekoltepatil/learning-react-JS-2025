@@ -37,19 +37,19 @@ const BookList = () => {
 const Book = (props) => {
   const { img, title, author, getBook, id } = props;
   // console.log(props);
-  const getSingleBook = () => {
+  const getPerticularBook = () => {
     getBook(id);
   };
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={getSingleBook}>click me to get info</button>
+
+      <button onClick={() => getBook(id)}>get info</button>
       <h4>{author}</h4>
     </article>
   );
 };
-
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
