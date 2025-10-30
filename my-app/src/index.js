@@ -22,36 +22,46 @@ const  books=[
 const BookList = () => {
   return (
     <section className="booklist">
-       {/* {books.map((book)=>{
+       {books.map((book)=>{
         const{img,title,author,}= book;
         return <Book img={img} title={title} author={author} />;
 
        })};
-        */}
+       
         <EventExamples/>
     </section>
   );
 };
 const EventExamples = () => {
-  const buttonClick = () => {
-    alert('button has been click');
+  const handleFormInput = (e) => {
+    console.log(e);
+    // e.target - element
+    console.log(`Input Name : ${e.target.name}`);
+    console.log(`Input Value : ${e.target.value}`);
+    // console.log('handle form input');
   };
- const handleFormInput= ()=>{
-  console.log('an input has been provided')
- }
-
-return (
+  const handleButtonClick = () => {
+    alert('handle button click');
+  };
+  const handleFormSubmission = (e) => {
+    e.preventDefault();
+    console.log('form submitted');
+  };
+  return (
     <section>
-      <form>
+      {/* add onSubmit Event Handler */}
+      <form onSubmit={handleFormSubmission}>
         <h2>Typical Form</h2>
         <input
           type='text'
-          name='hello'
+          name='example'
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
+        {/* add button with type='submit' */}
+        <button type='submit'>submit form</button>
       </form>
-      <button onClick={buttonClick}>click me</button>
+      <button onClick={handleButtonClick}>click me</button>
     </section>
   );
 };
