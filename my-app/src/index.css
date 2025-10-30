@@ -43,3 +43,23 @@ body {
   margin-top: 0.5rem;
   letter-spacing: 2px;
 }
+.book {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  /* set relative */
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  padding: 0.75rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #0014c3;
+  color: #f5f5f5;
+}
