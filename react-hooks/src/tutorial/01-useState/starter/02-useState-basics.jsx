@@ -11,6 +11,7 @@ const UseStateBasics = () => {
     
   };
   return (
+    
     <div>
       <h4>magic happens {count} times</h4>
       <button className='btn' onClick={handleClick}>
