@@ -1,12 +1,21 @@
+import Starter from "./tutorial/02-useEffect/starter/01-code-example";
 
-import Starter from './tutorial/01-useState/starter/05-useState-gotcha';
+import { useState } from 'react';
 
-function App() {
+const CodeExample = () => {
+  const [value, setValue] = useState(0);
+  const sayHello = () => {
+    console.log('hello world');
+    
+  };
+  sayHello();
   return (
-    <div className='container'>
-      <Starter ></Starter >
+    <div>
+      <h1>value : {value}</h1>
+      <button className='btn' onClick={() => setValue(value + 1)}>
+        click me
+      </button>
     </div>
   );
-}
-
-export default App;
+};
+export default CodeExample;
